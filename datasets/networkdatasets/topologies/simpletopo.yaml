@@ -1,0 +1,24 @@
+defaults:
+  lan_link:
+    default_bw: 100
+    default_delay: 0.1ms
+    default_loss: 0.001
+  wan_link:
+    default_bw: 10
+    default_delay: 10ms
+    default_loss: 0.1
+nodes:
+- name: node1
+- name: node2
+- name: node3
+- name: node4
+links:
+- src: node1
+  dst: node2
+- src: node2
+  dst: node4
+- src: node1
+  dst: node3
+- src: node3
+  dst: node4
+  
